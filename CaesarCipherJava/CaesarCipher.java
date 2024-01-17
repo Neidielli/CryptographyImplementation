@@ -17,7 +17,7 @@ public class CaesarCipher {
             // find the numerical representation associated with that character in the
             // alphabet
             int charIndex = alphabet.indexOf(character);
-            int encryptedIndex = (charIndex + key) % alphabet.length();
+            int encryptedIndex = Math.floorMod(charIndex + key, alphabet.length());
 
             // keep appending the encrypted character to the cipher_text
             cipherText += alphabet.charAt(encryptedIndex);
@@ -28,10 +28,10 @@ public class CaesarCipher {
     public String decrypt(String cipherText, int key) {
         String plainText = "";
 
-        for (int i = 0; i < cipherText.length(); i++) {
+        for (int i = 0; i < cipherText.length(); ++i) {
             char character = cipherText.charAt(i);
             int charIndex = alphabet.indexOf(character);
-            int decryptedIndex = (charIndex - key) % alphabet.length();
+            int decryptedIndex = Math.floorMod(charIndex - key, alphabet.length());
             plainText += alphabet.charAt(decryptedIndex);
         }
         return plainText;

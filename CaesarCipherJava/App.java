@@ -11,5 +11,6 @@ public class App {
         String cipherText = cipher.encrypt(text, 3);
 
         System.out.println(cipherText);
+        System.out.println(cipher.decrypt(cipherText, 3));
     }
 }
