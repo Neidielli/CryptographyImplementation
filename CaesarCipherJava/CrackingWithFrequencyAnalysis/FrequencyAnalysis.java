@@ -8,7 +8,7 @@ public class FrequencyAnalysis {
 
     // the method to do frequency analysis. Count the occurences of the given
     // characters
-    private Map<Character, Integer> run(String text) {
+    public Map<Character, Integer> run(String text) {
 
         // convert the text into uppercase letters
         text = text.toUpperCase();

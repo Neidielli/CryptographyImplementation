@@ -1,6 +1,5 @@
 package CaesarCipherJava.CrackingWithFrequencyAnalysis;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class CrackCaesar {
